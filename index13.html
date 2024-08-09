@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>
+Function Parameter
+</title>
+</head>
+<body>
+<form>
+<input type = "number" name = "first_num" id = "first">
+<input type = "number" name = "sec_num" id = "sec">
+<input type = "submit" onclick = "return main()">
+</form>
+
+<h1>The Addition is</h1>
+<p id = "add"></p>
+<h1>The subtraction is</h1>
+<p id = "sub"></p>
+<h1>The multipication is</h1>
+<p id = "multi"></p>
+<h1>The divison is</h1>
+<p id = "divide"></p>
+
+<script>
+	function main()
+	{
+		var a = Number(document.getElementById("first").value);
+		var b = Number(document.getElementById("sec").value);
+		add(a,b);
+		sub(a,b);
+		multi(a,b);
+		divide(a,b);
+		return false;
+	}
+	function add(x,y)
+	{
+		var result = document.getElementById("add");
+		result.innerHTML = x+y;
+	}
+	function sub(x,y)
+	{
+		var result = document.getElementById("sub");
+		result.innerHTML = x-y;
+	}
+	function multi(x,y)
+	{
+		var result = document.getElementById("multi");
+		result.innerHTML = x*y;
+	}
+	function divide(x,y)
+	{
+		var result = document.getElementById("divide");
+		result.innerHTML = x/y;
+	}
+</script>
+</body>
+</html>
